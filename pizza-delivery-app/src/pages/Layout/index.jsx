@@ -12,8 +12,7 @@ export default function Layout() {
 
     const [basket, setBasket] = useState({ count: 0, totalPrice: 0.00 });
 
-    const [summaryCard, setSummaryCard] = useState([])
-    console.log(JSON.stringify(summaryCard))
+    const [summaryCard, setSummaryCard] = useState([]);
 
 
     return( 
