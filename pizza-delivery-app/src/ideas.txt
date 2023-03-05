@@ -1,0 +1,35 @@
+   //update basket button and summary component
+   function onAdd() {
+      setBasket({ count: newCount, totalPrice: newAmountPrice || newSizePrice });
+      setSummary({
+         id: meal.id,
+         name: meal.name,
+         image: meal.image,
+         price: meal.price
+      })
+      setSummaryCard(prevState=> {
+         return [
+            ...prevState,
+            <FullCart key={summary.id}>
+            <ContainerLeft>
+              <img src={summary.image} alt="summary" />
+              <Typography variant="h6" component={"h6"} sx={{ margin: 2 }}>
+                {summary.name}
+              </Typography>
+            </ContainerLeft>
+            <ContainerRight>
+              <Typography
+                variant="h6"
+                component={"h6"}
+                sx={{
+                  width: "100px",
+                  textAlign: "center",
+                  fontFamily: "Roboto Condensed, sans-serif",
+                }}
+              >
+                £{summary.price}
+              </Typography>
+              <RemoveButton>REMOVE</RemoveButton>
+            </ContainerRight>
+          </FullCart>]
+      })
