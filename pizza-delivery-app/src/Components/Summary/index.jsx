@@ -1,6 +1,5 @@
-import { Typography } from "@mui/material"
-import { EmptyCart, SummaryContainer, TitleBox, Ornament, CountContainer, ItemsContainer, TotalPriceContainer, RemoveButton, ContainerLeft, ContainerRight, FullCart } from "./summary.style"
-import Menus from "../../data"
+import { Typography } from "@mui/material";
+import { EmptyCart, SummaryContainer, TitleBox, Ornament, Title, CountContainer, ItemsContainer, TotalPriceContainer, RemoveButton, ContainerLeft, ContainerRight, FullCart } from "./summary.style"
 
 export default function Summary( {basket, summaryCard, setSummaryCard, setBasket } ) {
 
@@ -22,9 +21,9 @@ export default function Summary( {basket, summaryCard, setSummaryCard, setBasket
             <SummaryContainer>
                 <TitleBox>
                     <Ornament src={require("../../images/ornament-pizza-2.webp")} alt="" />
-                    <Typography variant="h3" component={"h2"} sx={{ fontFamily: 'Roboto Condensed, sans-serif', fontWeight: 'bold' }}>
+                    <Title variant="h3" component={"h2"}>
                         BASKET SUMMARY
-                    </Typography>
+                    </Title>
                     <Ornament src={require("../../images/ornament-pizza-2.webp")} alt="" />
                 </TitleBox>
                 <CountContainer >

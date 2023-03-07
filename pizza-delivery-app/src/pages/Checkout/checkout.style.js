@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Stepper, Box, StepLabel, Button } from "@mui/material";
 
+const media = {
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)'
+}
+
 export const BoxContainer = styled(Box)`
     width: 100%;
     min-height: 80vh;
@@ -32,9 +38,13 @@ export const StepLabelStyled = styled(StepLabel)`
         &.MuiStepLabel-root {
             & .MuiStepLabel-labelContainer {
                 & .MuiStepLabel-label {
-                    font-size: 1.2rem;
+                    font-size: .9rem;
                     font-weight: 600;
                     font-family: 'Roboto Condensed', sans-serif;
+
+                    ${media.laptop} {
+                        font-size: 1.2rem;
+                    }
                 } 
                  
             }
@@ -42,12 +52,20 @@ export const StepLabelStyled = styled(StepLabel)`
             & .MuiStepIcon-text {
                 font-weight: 600;
                 font-family: 'Roboto Condensed', sans-serif;
-                font-size: 1.2rem;
+                font-size: 1rem;
+
+                ${media.laptop} {
+                        font-size: 1.2rem;
+                    }
                 } 
 
             & .MuiSvgIcon-root {
-                width: 30px;
+                width: 20px;
+                height: 20px;
+                ${media.laptop} {
+                    width: 30px;
                 height: 30px;
+                    }
             }
         }
 `

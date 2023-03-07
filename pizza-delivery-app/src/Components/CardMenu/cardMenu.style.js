@@ -9,6 +9,9 @@ export const PaperStyled = styled(Paper)`
 `
 
 export const BoxInfo = styled(Box)`
+    height: 70px;
+    display: flex;
+    align-items: center;
     &.MuiBox-root {
         margin: .8rem;
     }

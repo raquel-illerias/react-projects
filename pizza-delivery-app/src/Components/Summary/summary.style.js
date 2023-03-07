@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { Box, Card, Button } from "@mui/material";
+import { Box, Card, Button, Typography } from "@mui/material";
+
+const media = {
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)'
+}
 
 export const SummaryContainer = styled(Box)`
     width: 100vw;
@@ -19,6 +25,19 @@ export const TitleBox = styled(Box)`
         justify-content:center;
         text-align: center; 
         margin-bottom: 1rem;
+    }
+`
+
+export const Title = styled(Typography)`
+    &.MuiTypography-root {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 2.1rem;
+        text-align: center;
+
+        ${media.laptop} {
+        font-size: 2.8rem;
+        }
     }
 `
 

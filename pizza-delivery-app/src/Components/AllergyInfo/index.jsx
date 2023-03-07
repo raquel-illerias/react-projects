@@ -4,7 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { AccordionContainer, InfoIconStyled } from "./allergyInfo.style.js"
+import { AccordionContainer, InfoIconStyled } from "./allergyInfo.style.js";
 
 export default function AllergyInfo() {
     return (

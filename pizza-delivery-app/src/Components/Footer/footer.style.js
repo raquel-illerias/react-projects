@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Paper, Typography } from "@mui/material";
+import { Paper } from "@mui/material";
 
 export const FooterContainer = styled(Paper)`
     &.MuiPaper-root {
@@ -10,4 +10,11 @@ export const FooterContainer = styled(Paper)`
         justify-content: center;
         align-items: center;
     }
+`
+
+export const SvgStyled = styled.svg`
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin: 0 1rem;
 `

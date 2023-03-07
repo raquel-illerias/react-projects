@@ -6,6 +6,7 @@ import Checkout from "../Checkout"
 //import Components
 import Footer from "../../Components/Footer"
 import Header from "../../Components/Header";
+import { LayoutContainer } from "./layout.style";
 import { useState } from "react";
 
 export default function Layout() {
@@ -16,13 +17,13 @@ export default function Layout() {
 
 
     return( 
-        <div>
+        <LayoutContainer>
             <Header basket={basket}></Header>
             {<Routes>
                 <Route path="/" element={<Homepage summaryCard={summaryCard} setSummaryCard={setSummaryCard} setBasket={setBasket} basket={basket}/>} />
                 <Route path="/checkout" element={<Checkout basket={basket} setBasket={setBasket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>} />
             </Routes>}
             <Footer></Footer>
-        </div>
+        </LayoutContainer>
     )
 }

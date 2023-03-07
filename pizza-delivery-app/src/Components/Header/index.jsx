@@ -3,7 +3,6 @@ import { BasketButton, BasketIcon, BasketPrice, BasketName, Figure, LogoImage, L
 
 
 export default function Header({ basket }) {
-    // const {count} = useContext(Context)
 
     //watch window resizing 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);

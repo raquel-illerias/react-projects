@@ -1,13 +1,8 @@
-import {
-    FormControl,
-    TextField,
-    InputLabel,
-    Typography
-} from "@mui/material";
+import { FormControl, TextField, InputLabel, Typography } from "@mui/material";
 import { KcalContainer } from "./selectSize.style";
 
 
-export default function SelectSize({ calorie, size, itemOptions, handleSize, select, selectedKcal  }) {
+export default function SelectSize({ calorie, itemOptions, handleSize, select, selectedKcal  }) {
 
     return (
         <>

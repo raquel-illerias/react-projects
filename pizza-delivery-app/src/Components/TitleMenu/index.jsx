@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import { TitleContainer, TitleWrapper, TitleBox, Ornament, Speciality } from "./titleMenu.style"
+import { TitleContainer, TitleWrapper, TitleBox, Ornament, Speciality, Title } from "./titleMenu.style"
 
 export default function TitleMenu({ title, speciality }) {
     return (
@@ -8,9 +7,9 @@ export default function TitleMenu({ title, speciality }) {
                 {title && <TitleWrapper maxWidth="sm">
                     <TitleBox>
                         <Ornament src={require("../../images/ornament-pizza-2.webp")} alt="" />
-                        <Typography variant="h2" component={"h2"} sx={{ fontFamily: 'Roboto Condensed, sans-serif', fontWeight: 'bold' }}>
+                        <Title variant="h2" component={"h2"} sx={{ fontFamily: 'Roboto Condensed, sans-serif', fontWeight: 'bold' }}>
                             {title}
-                        </Typography>
+                        </Title>
                         <Ornament src={require("../../images/ornament-pizza-2.webp")} alt="" />
                     </TitleBox>
                 </TitleWrapper>

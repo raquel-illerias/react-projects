@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Box, Step, Button, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Box, Step } from '@mui/material';
 import { StepperStyled, BoxContainer, StepLabelStyled, FragmentContainer, ButtonContainer, ConfirmButton, BackButton } from './checkout.style';
 import Summary from '../../Components/Summary';
 import CheckoutForm from '../../Components/CheckoutForm';
 import Confirmation from '../../Components/Confirmation';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,7 +17,7 @@ export default function Checkout({ basket, summaryCard, setSummaryCard, setBaske
         },
         {
             label: 'CHECKOUT',
-            content: <CheckoutForm></CheckoutForm>
+            content: <CheckoutForm basket={basket}></CheckoutForm>
         },
         {
             label: 'CONFIRMATION',
@@ -26,14 +26,18 @@ export default function Checkout({ basket, summaryCard, setSummaryCard, setBaske
 
     const [activeStep, setActiveStep] = React.useState(0);
 
-    const handleNext = () => {
+    function handleNext()  {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        if (activeStep === 1) {
+            setBasket({ count: 0, totalPrice: 0.00 });
+            setSummaryCard([]);
+        }
     };
 
-    const handleBack = () => {
+    function handleBack() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
-
+ 
     return (
         <BoxContainer>
             <StepperStyled activeStep={activeStep}>
@@ -47,22 +51,6 @@ export default function Checkout({ basket, summaryCard, setSummaryCard, setBaske
                     );
                 })}
             </StepperStyled>
-
-            {activeStep === steps.length ? (
-                <React.Fragment>
-                    <FragmentContainer>
-                        <Typography sx={{ mt: 2, mb: 1 }}>
-                            All steps completed - you&apos;re finished
-                        </Typography>
-                        <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-                            <Box sx={{ flex: '1 1 auto' }} />
-                            <Link to="/">
-                                <Button>GO TO HOMEPAGE</Button>
-                            </Link>
-                        </Box>
-                    </FragmentContainer>
-                </React.Fragment>
-            ) : (
                 <React.Fragment>
                     <FragmentContainer activestep={activeStep}>
                         {steps.map((step, index) => {
@@ -75,7 +63,7 @@ export default function Checkout({ basket, summaryCard, setSummaryCard, setBaske
                             );
                         })}
                         <ButtonContainer>
-                            {activeStep !== 0 && (
+                            {activeStep === 1 && (
                                 <BackButton
                                     className='backButton'
                                     color="inherit"
@@ -86,13 +74,20 @@ export default function Checkout({ basket, summaryCard, setSummaryCard, setBaske
                                     BACK
                                 </BackButton>
                             )}
-                            <ConfirmButton disabled={basket.count === 0} onClick={handleNext} className="confirmButton">
-                                {activeStep === steps.length - 1 ? 'FINISH' : 'CONFIRM'}
+                            {activeStep !== steps.length - 1 && <ConfirmButton disabled={basket.count === 0} onClick={handleNext} className="confirmButton">
+                                CONFIRM
+                            </ConfirmButton>}
+                            {activeStep === steps.length - 1 && 
+                            <Link to="/">
+                            <ConfirmButton to="/" className="confirmButton">
+                                HOMEPAGE
                             </ConfirmButton>
+                            </Link>
+                            }
                         </ButtonContainer>
                     </FragmentContainer>
                 </React.Fragment>
-            )}
+            
         </BoxContainer>
     );
 }

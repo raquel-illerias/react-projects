@@ -10,7 +10,7 @@ export const AccordionContainer = styled.div`
 `
 
 export const InfoIconStyled = styled(InfoIcon)`
-    color: #53c777;
+    color: #028ecc;
     margin-right: .5rem;
 `
 
