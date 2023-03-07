@@ -45,7 +45,7 @@ function a11yProps(index) {
 
 // Component
 
-export default function Nav() {
+export default function Nav({setBasket, basket, summaryCard, setSummaryCard}) {
 
     const [value, setValue] = useState(0);
 
@@ -69,16 +69,16 @@ export default function Nav() {
             </BoxContainer>
             <AllergyInfo />
             <TabPanel value={value} index={0}>
-                <Pizza />
+                <Pizza setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Sides />
+                <Sides setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Desserts />
+                <Desserts setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Drinks />
+                <Drinks setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
             </TabPanel>
         </Box>
     );
