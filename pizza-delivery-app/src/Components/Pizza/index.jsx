@@ -1,8 +1,8 @@
 import CardMenu from "../../Components/CardMenu";
 import TitleMenu from "../../Components/TitleMenu";
-import Menus from "../../data";
+import Menus from "../../data"
 import { ContainerStyled, ToggleContainer } from "./pizza.style";
-import { FormControlLabel, Switch } from "@mui/material";
+import { FormControlLabel, Switch } from "@mui/material"
 import { useState } from "react";
 
 export default function Pizza({basket, setBasket, summaryCard, setSummaryCard}) {
@@ -28,7 +28,7 @@ export default function Pizza({basket, setBasket, summaryCard, setSummaryCard}) 
 
     const glutenFreeMeals = Menus[1].meals.map(meal => {
         return (
-            <CardMenu key={meal.id} meal={meal} setBasket={setBasket} calorie={calorie} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}></CardMenu>
+            <CardMenu key={meal.id} meal={meal} calorie={calorie} setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}></CardMenu>
         )
     })
 

@@ -8,6 +8,7 @@ import Pizza from "../Pizza";
 import Sides from "../Sides";
 import { BoxContainer, TabStyled } from "./nav.style";
 
+
 function TabPanel(props) {
 
     const { children, value, index, ...other } = props;
@@ -44,7 +45,7 @@ function a11yProps(index) {
 
 // Component
 
-export default function Nav({setBasket, basket, summaryCard, setSummaryCard}) {
+export default function Nav() {
 
     const [value, setValue] = useState(0);
 
@@ -68,16 +69,16 @@ export default function Nav({setBasket, basket, summaryCard, setSummaryCard}) {
             </BoxContainer>
             <AllergyInfo />
             <TabPanel value={value} index={0}>
-                <Pizza setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
+                <Pizza />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Sides setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
+                <Sides />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Desserts setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
+                <Desserts />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Drinks setBasket={setBasket} basket={basket} summaryCard={summaryCard} setSummaryCard={setSummaryCard}/>
+                <Drinks />
             </TabPanel>
         </Box>
     );

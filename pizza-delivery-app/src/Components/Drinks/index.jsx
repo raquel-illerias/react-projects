@@ -1,8 +1,8 @@
 import CardMenu from "../../Components/CardMenu";
 import TitleMenu from "../../Components/TitleMenu";
-import Menus from "../../data";
+import Menus from "../../data"
 import { ContainerStyled, ToggleContainer } from "./drinks.style";
-import { FormControlLabel, Switch } from "@mui/material";
+import { FormControlLabel, Switch } from "@mui/material"
 import { useState } from "react";
 
 export default function Drinks({setBasket, basket, summaryCard, setSummaryCard}) {
