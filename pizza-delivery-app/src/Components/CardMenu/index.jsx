@@ -5,7 +5,7 @@ import SelectAmount from "../SelectAmount";
 import { useState } from "react";
 
 
-export default function CardMenu({ meal, calorie, setBasket, basket, summaryCard, setSummaryCard }) {
+export default function CardMenu({ meal, calorie, setBasket, basket, setSummaryCard }) {
 
    //HANDLING SELECT INPUT FOR PIZZA
    //handle changes in select input 

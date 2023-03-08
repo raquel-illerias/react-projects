@@ -26,8 +26,7 @@ export const StepperStyled = styled(Stepper)`
         & .MuiStepLabel-iconContainer.Mui-active {
          & .MuiSvgIcon-root{
             color: #028ecc;
-            }  
-            
+            }     
         }
        }
     }
@@ -38,11 +37,11 @@ export const StepLabelStyled = styled(StepLabel)`
         &.MuiStepLabel-root {
             & .MuiStepLabel-labelContainer {
                 & .MuiStepLabel-label {
-                    font-size: .9rem;
+                    font-size: 1rem;
                     font-weight: 600;
                     font-family: 'Roboto Condensed', sans-serif;
 
-                    ${media.laptop} {
+                    ${media.tablet} {
                         font-size: 1.2rem;
                     }
                 } 
@@ -54,17 +53,17 @@ export const StepLabelStyled = styled(StepLabel)`
                 font-family: 'Roboto Condensed', sans-serif;
                 font-size: 1rem;
 
-                ${media.laptop} {
+                ${media.tablet} {
                         font-size: 1.2rem;
                     }
                 } 
 
             & .MuiSvgIcon-root {
-                width: 20px;
-                height: 20px;
-                ${media.laptop} {
+                width: 18px;
+                height: 18px;
+                ${media.tablet} {
                     width: 30px;
-                height: 30px;
+                    height: 30px;
                     }
             }
         }

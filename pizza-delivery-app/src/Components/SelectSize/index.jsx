@@ -14,7 +14,7 @@ export default function SelectSize({ calorie, itemOptions, handleSize, select, s
                     </Typography>
                 </KcalContainer>
             ) : null}
-            <FormControl sx={{ m: 1, minWidth: 200 }}>
+            <FormControl sx={{ marginLeft: "1.2rem", minWidth: 200 }}>
                 <InputLabel id="size__select-label"></InputLabel>
                 <TextField
                     id="size__select"

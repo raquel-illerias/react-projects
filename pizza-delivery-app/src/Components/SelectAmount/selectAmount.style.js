@@ -10,12 +10,12 @@ export const PaperStyled = styled(Paper)`
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 `
 
 export const KcalContainer = styled(Box)`
     &.MuiBox-root{
-        margin-left: 1rem;
+        margin-left: 1.2rem;
         color: #656870;
     }
     

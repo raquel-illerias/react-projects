@@ -282,28 +282,28 @@ const Menus =
       "meals": [
         {
           "id": 5.1,
-          "name": "Glaceau Smartwater (Still)- 600ml",
+          "name": "Glaceau Smartwater-600ml",
           "kcal": [0],
           "price": 1.39,
           "image": require("./images/drinks/smartwater-still.webp")
         },
         {
           "id": 5.2,
-          "name": "Fanta- 500ml",
+          "name": "Fanta-500ml",
           "kcal": [364],
           "price": 1.99,
           "image": require("./images/drinks/fanta.webp")
         },
         {
           "id": 5.3,
-          "name": "Sprite- 500ml",
+          "name": "Sprite-500ml",
           "kcal": [325],
           "price": 1.99,
           "image": require("./images/drinks/sprite.webp")
         },
         {
           "id": 5.4,
-          "name": "Coca-Cola Classic- 500ml",
+          "name": "Coca-Cola-500ml",
           "kcal": [439],
           "price": 1.99,
           "image": require("./images/drinks/coca-cola-classic.webp")

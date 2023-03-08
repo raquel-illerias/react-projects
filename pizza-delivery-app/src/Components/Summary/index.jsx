@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { EmptyCart, SummaryContainer, TitleBox, Ornament, Title, CountContainer, ItemsContainer, TotalPriceContainer, RemoveButton, ContainerLeft, ContainerRight, FullCart } from "./summary.style"
+import { NameStyled, ImageStyled, EmptyCart, SummaryContainer, TitleBox, Ornament, Title, CountContainer, ItemsContainer, TotalPriceContainer, RemoveButton, ContainerLeft, ContainerRight, FullCart } from "./summary.style"
 
 export default function Summary( {basket, summaryCard, setSummaryCard, setBasket } ) {
 
@@ -36,10 +36,10 @@ export default function Summary( {basket, summaryCard, setSummaryCard, setBasket
                       summaryCard.map((item) => (
                         <FullCart key={item.key}>
                         <ContainerLeft>
-                          <img src={item.image} alt="item" />
-                          <Typography variant="h6" component={"h6"} sx={{ margin: 2 }}>
+                          <ImageStyled src={item.image} alt="item" />
+                          <NameStyled variant="h6" component={"h6"}>
                             {item.name}
-                          </Typography>
+                          </NameStyled >
                         </ContainerLeft>
                         <ContainerRight>
                           <Typography

@@ -2,10 +2,19 @@ import { Box, Typography, Paper, Button, Card} from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import styled from "styled-components";
 
+const media = {
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)'
+}
+
 export const PaperStyled = styled(Paper)`
     min-width: 280px;
-    min-height: 300px; 
-    background-color: "#fff";
+    min-height: 300px;
+    margin: 0 1rem;
+    &.MuiPaper-root{
+    background-color: #fff;
+    }
 `
 
 export const BoxInfo = styled(Box)`
@@ -13,7 +22,7 @@ export const BoxInfo = styled(Box)`
     display: flex;
     align-items: center;
     &.MuiBox-root {
-        margin: .8rem;
+        margin: .8rem 1.2rem;
     }
 `
 

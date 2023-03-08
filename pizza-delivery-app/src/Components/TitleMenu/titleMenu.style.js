@@ -42,7 +42,7 @@ export const Title = styled(Typography)`
     &.MuiTypography-root { 
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
-        font-size: 2.1rem;
+        font-size: 2.4rem;
         text-align: center;
 
         ${media.laptop} {
@@ -61,7 +61,7 @@ export const Speciality = styled(Typography)`
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: bold;
         color: #e91c37;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         text-align: center;
         ${media.laptop} {
         font-size: 2rem;

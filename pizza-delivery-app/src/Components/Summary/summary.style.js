@@ -60,6 +60,10 @@ export const ItemsContainer = styled(Box)`
      flex-direction: column;
      align-items: center;
      justify-content: space-evenly;
+
+     ${media.laptop} {
+        width: 70%;
+     }
 `
 
 export const EmptyCart = styled(Card)`
@@ -72,28 +76,80 @@ export const EmptyCart = styled(Card)`
 
 export const FullCart = styled(Card)`
     width: 90%;
-    height: 120px;
+    height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0
+    margin: 1rem 0;
+
+    ${media.tablet} {
+        width: 90%;
+        height: 110px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
 `
 
 export const ContainerLeft = styled(Box)`
-    height: 100%;
-    width: 50%;
+    width: 100%;
+    height: 120px;
     display: flex;
-    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+
+    ${media.tablet} { 
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+    }
+`
+
+export const NameStyled = styled(Typography)`
+    &.MuiTypography-root {
+    font-size: 1.1rem;
+    margin-top: 0.6rem;
+    ${media.tablet} { 
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+    }  
+`
+
+export const ImageStyled = styled.img`
+    height: 80px;
+    margin-top: .6rem;
+    ${media.tablet} { 
+        height: 100%;
+        margin-top: 0;
+    }
 `
 
 export const ContainerRight = styled(Box)`
-    height: 100%;
-    width: 50%;
+    width: 100%;
+    height: 120px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-end;
-    padding-right: 20px;
+    margin-top: .6rem;
+
+    ${media.tablet} {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding-right: 20px; 
+        margin-top: 1.2rem;
+    }
 `
 
 export const RemoveButton = styled(Button)`
@@ -119,5 +175,8 @@ export const TotalPriceContainer = styled(Box)`
      align-items: center;
      justify-content: space-between;
      padding: 0 1rem;
+     ${media.laptop} {
+        width: 70%;
+     }
 `
 
