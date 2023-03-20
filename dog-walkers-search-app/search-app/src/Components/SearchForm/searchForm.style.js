@@ -10,52 +10,15 @@ const media = {
     desktop: '@media screen and (min-width: 1025px)'
 }
 
-export const ContainerStyled = styled.div`
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-export const HeaderContainer = styled.div`
-    width: 100%;
-    height: 120px;
-    margin: 5rem 0 2.5rem;
+export const FormContainer = styled(Paper)`
+    width: 90%;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: #009950;
-`
 
-export const HeaderOne = styled.h1`
-    font-size: 1.8rem;
-    font-weight: 700;
-    
-    ${media.tablet} {
-        font-size: 2.2rem;
-    }
-    ${media.laptop} {
-        font-size: 3rem;
-    }
-`
-
-export const HeaderTwo = styled.h2`
-    font-size: 1.5rem;
-    font-weight: 600;
-    ${media.tablet} {
-        font-size: 1.9rem;
-    }
-    ${media.laptop} {
-        font-size: 2.7rem;
-    }
-`
-
-export const FormContainer = styled(Paper)`
-    width: 90%;
-    min-height: 20vh;
-    ${media.tablet} {
+    ${media.tablet} {   
         width: 80%;
     }
     ${media.laptop} {
@@ -67,103 +30,110 @@ export const FormContainer = styled(Paper)`
 `
 
 export const FormWrapper = styled(Box)`
-     width: 100%;
-     margin: 1.5rem 0;
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     justify-content: space-evenly;
-     text-align: center;
+
+    &.MuiBox-root {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: 2rem;
+
+        .header__three{
+            font-size: 1.7rem;
+            margin-bottom: 2rem;      
+            ${media.laptop} {
+            font-size: 2rem;
+            }
+     }
+    }    
 `
 
 export const InputContainer = styled.div`
-    height: 80px;
+    width: 100%;
+    min-height: 30px;
     text-align: start;
-    font-size: .9rem;
-    margin: 0 2rem 2rem;
+    font-size: .8rem;
+    margin-bottom: 2rem;
+
+    .input__label {
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: .3rem;
+    }
+ 
+    .end {
+        display: none;           
+        }
+
+    ${media.laptop} {
+            .end {
+                display: block;
+                visibility: hidden;                
+            }
+        }
+`
+
+export const DateStartContainer = styled.div`
+    width: 100%;
+    min-height: 30px;
+    text-align: start;
+    font-size: .8rem;
+
+    .input__label {
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: .3rem;
+    }
 `
 
 export const TextFieldStyled = styled(TextField)`
     &.MuiFormControl-root {
-        width: 250px;
-        margin-top: .5rem;
+        width: 100%;
         background-color: #fff;
-
-        ${media.tablet} {
-            width: 350px;
-        }
-        ${media.laptop} {
-            width: 400px;
-        }
+        margin-top: .3rem;
     }
 `
 
 export const DatePickerContainer = styled(Box)`
-    width: 100%;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    ${media.laptop} {
-          flex-direction: row;
+    &.MuiBox-root {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        ${media.laptop} {
+            flex-direction: row;
         }
+    }  
 `
 
 export const DateWrapper = styled(Box)`
-    width: 242px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: start;
-    font-size: .9rem;
+    &.MuiBox-root{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: start;
+        font-size: .9rem;
+    }
 `
 
 export const ArrowForward = styled(ArrowForwardIcon)`
     width: 20px;
     height: 20px;
-    margin: 0 .5rem;
     &.MuiSvgIcon-root {
         fill: #969696;
+        margin-left: .3rem;
     }
 `
 
-export const CheckBoxContainer = styled.div`
+export const CheckboxWrapper = styled.div`
     width: 100%;
-    height: 80px;
-    text-align: center;  
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 10px;
 `
 
-export const CheckBoxWrapper = styled.div`
-    width: 80px;
-    height: 65px;
-    background-color: #fff;
-    border-radius: 4px;
-    border: 2px solid #e2e2e2;
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: .9rem;
-    color: #676767;
-    cursor: pointer;
-    position: relative;
-`
-
-export const CheckBoxLabel = styled.label`
-    line-height: 1.8rem;
-`
-
-export const CheckBoxInput = styled.input`
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    display: none; 
-`
 export const ButtonSearch = styled(Button)`
-    width: 200px;
+    width: 100%;
     height: 55px;
     &.MuiButton-root {
         color: #fff;

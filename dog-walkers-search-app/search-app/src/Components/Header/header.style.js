@@ -13,7 +13,6 @@ export const StyledHeader = styled.header`
     align-items:center;
     justify-content: center;
     background-color: #fff;
-    color: #fff;
     font-size: 2.3rem;
     position: sticky;
     top: 0;

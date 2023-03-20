@@ -5,7 +5,7 @@ export const FooterContainer = styled(Paper)`
     &.MuiPaper-root {
         width: 100%;
         height: 150px;
-        background-color: #d2fadf;
+        background-color: #edfdf3;
         display:flex;
         justify-content: center;
         align-items: center;
