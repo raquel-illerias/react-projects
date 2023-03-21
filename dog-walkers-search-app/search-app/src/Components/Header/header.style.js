@@ -14,6 +14,7 @@ export const StyledHeader = styled.header`
     justify-content: center;
     background-color: #fff;
     font-size: 2.3rem;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1052;
