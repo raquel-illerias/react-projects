@@ -13,7 +13,7 @@ export default function Layout() {
             <Header></Header>
             {<Routes>
                 <Route path="/" element={<Homepage  />} />
-                <Route path="/profileResults" element={<ProfileResults  />} />
+            <Route path="/profileResults" element={<ProfileResults />} />
             </Routes>
             }
             <Footer></Footer>

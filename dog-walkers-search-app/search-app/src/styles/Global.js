@@ -16,7 +16,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-size: 10px;
-    background-color: #f3f3f3;
+    background-color: #fbfbfb;
     color: #000;
     font-family: 'Roboto Condensed', sans-serif;
 }
