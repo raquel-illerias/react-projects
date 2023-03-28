@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-
 export const ProfileWrapper = styled.div`
     max-width: 100%;
     height: 160px;

@@ -1,7 +1,11 @@
-import { PaginationContainer, WrapperStyled, ContainerStyled, HeaderContainer, HeaderOne, ProfileContainer, MapContainer, ResultsWrapper, MapWrapper } from "./profileResults.style";
+//import MUI Components
 import { Pagination } from "@mui/material";
+//import Styled Components
+import { PaginationContainer, WrapperStyled, ContainerStyled, HeaderContainer, HeaderOne, ProfileContainer, MapContainer, ResultsWrapper, MapWrapper } from "./profileResults.style";
+//import modules
 import PersonaCard from "../../Components/Personas";
 import Profiles from '../../data';
+//import store
 import { useCheckboxStore } from "../../stores/checkbox.store";
 
 export default function ProfileResults() {

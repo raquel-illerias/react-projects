@@ -1,14 +1,15 @@
-import { DateStartContainer, CheckboxWrapper, ButtonSearch, InputContainer, DateWrapper, ArrowForward, FormContainer, FormWrapper, TextFieldStyled, DatePickerContainer } from "./searchForm.style";
+//import MUI Components
 import dayjs, { Dayjs } from 'dayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
-//import React Routers
-import { Link } from 'react-router-dom';
+//import Styled Components
+import { DateStartContainer, CheckboxWrapper, ButtonSearch, InputContainer, DateWrapper, ArrowForward, FormContainer, FormWrapper, TextFieldStyled, DatePickerContainer } from "./searchForm.style";
 // import hooks
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function SearchForm() {
 
@@ -51,6 +52,14 @@ export default function SearchForm() {
     const handleBigChange = () => {
         setBigChecked(!bigChecked);
     };
+
+    //HANDLE SEARCH BUTTON
+
+    function handleSearch() {
+        if((smallChecked && mediumChecked && bigChecked) === false) {
+            return console.log("something needs to be checked")
+        }
+    }
 
     return (
         <>
@@ -116,9 +125,7 @@ export default function SearchForm() {
                         </CheckboxWrapper>
                     </InputContainer>
                     <InputContainer>
-                        <Link to="/profileResults">
-                            <ButtonSearch  variant="contained">Search</ButtonSearch>
-                        </Link>
+                        <ButtonSearch href="/profileResults" variant="contained" onClick={handleSearch}>Search</ButtonSearch>
                     </InputContainer>
                 </FormWrapper>
             </FormContainer>

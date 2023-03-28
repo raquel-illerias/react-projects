@@ -59,7 +59,7 @@ export const ResultsWrapper = styled.div`
     width: 100%;
     min-height: 150vh;
     background-color: #f4f5f6;
-    padding: 0 1rem 1rem 1rem;    
+    padding: 0 1rem 1rem 1rem;   
 
     ${media.laptop} {
         display: flex;
@@ -76,6 +76,7 @@ export const ProfileContainer = styled.div`
 
     ${media.laptop} {
         width: 60%;
+        padding-right: 1rem;
     }
 `
 

@@ -3,22 +3,12 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material';
-import theme from './styles/theme';
-import GlobalStyles from './styles/Global';
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-     <BrowserRouter>
-    <GlobalStyles />
-    <ThemeProvider theme={theme}>
-      <App />
-      </ThemeProvider>
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
 

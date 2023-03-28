@@ -22,7 +22,7 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color:#00bc73;
+    color:#6e9aff;
 `
 
 export const HeaderOne = styled.h1`
