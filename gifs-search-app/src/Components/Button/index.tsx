@@ -1,17 +1,12 @@
-import React from 'react'
-import { ButtonStyled } from './button.style'
-
+import { ButtonStyled } from "./button.style";
+import { useThemeStore } from "../../stores/theme.store";
 
 export default function Button() {
-   
+    const theme = useThemeStore((state) => state.theme)
 
     return (
-        <ButtonStyled >
-            <span>
-            </span>
-            <span></span>
+        <ButtonStyled theme={theme}>                  
         </ButtonStyled>
     )
 }
-
 

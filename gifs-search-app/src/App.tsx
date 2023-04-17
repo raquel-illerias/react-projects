@@ -1,5 +1,6 @@
 import React from 'react';
 import {AppStyled} from './App.style'
+import { useThemeStore } from "./stores/theme.store";
 
 import Button from "./Components/Button";
 import Favourites from "./Components/Favourites";
@@ -8,19 +9,14 @@ import Search from "./Components/Search";
 import Trending from "./Components/Trending";
 
 export default function App() {
+
+  const {theme} = useThemeStore((state) => state);
+
   return (
-    <AppStyled >
-    <Header  />
-    <div className="fetch-btns">
-      <Button 
-        
-      />
-      <Button 
-      />
-      <Button 
-      />
-    </div>
+    <AppStyled theme={theme}>
+    <Header />
     <main>
+    
     </main>
   </AppStyled>
   );

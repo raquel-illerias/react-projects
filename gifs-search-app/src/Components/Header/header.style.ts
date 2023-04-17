@@ -1,84 +1,77 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import background from '../../images/bg.jpg';
 
+const media = {
+    tablet: '@media screen and (min-width: 481px)',
+    laptop: '@media screen and (min-width: 769px)',
+    desktop: '@media screen and (min-width: 1025px)'
+}
 
 export const HeaderStyled = styled.header`
-    padding: 2rem 4.5rem;
-    background-color: ${(props) => props.theme.colourBg2};
+    width: 100%;
+    height: 55vh;
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    flex-direction: column;   
-    gap: 2rem;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-evenly;
     
     .logo{
-        width: 100%;
+        width: 165px;
+        height: 25px;
+        border-radius: 25px;
         display: flex;
         align-items: center;
-        justify-content: right;
-        gap: 1rem;
+        justify-content: center;
+        gap: .5rem;
+        background-color: ${(props) => props.theme.colourBlack};
         span{
             text-transform: uppercase;
-            color: ${(props) => props.theme.colourGrey};
-            font-size: .6rem;
+            color: ${(props) => props.theme.colourGreyDark};
+            font-size: .7rem;
+            font-weight: 600;
         }
         svg{
-            width: 5rem;
+            width: 4rem;
         }
     }
 
     form{
-        width: 100%;
-        padding: 0 15rem;
+        width: 90%;
+        height: 60px;
         display: flex;
         align-items: center;
-        @media screen and (max-width: 1300px){
-        padding: 0 10rem;
-    }
+
+     ${media.laptop} {
+        width: 60%;
+     }  
+                
+    
         .input-control{
             position: relative;
             width: 100%;
+            border: 4px solid ${props => props.theme.colourDarkBlue2};
+            border-radius: 35px;
+           
             input{
                 position: relative;
                 z-index: 10;
                 width: 100%;
+                height: 60px;
                 font-family: inherit;
                 font-size: inherit;
                 padding: 1rem 2rem;
-                outline: none;
-                border: none;
                 border-radius: 35px;
-            }
-            &::after{
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: -.3rem;
-                transform: translateY(-50%);
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%);
-                background-size: 400% 400%;
-                z-index: 1;
-                padding: .3rem;
-                transform: scale(0);
-                border-radius: 1rem;
-                transition: all .3s ease;
-                animation: gradient 7s ease-in-out infinite;
-                @keyframes gradient{
-                    0%{
-                        background-position: 0% 50%;
-                    }
-                    50%{
-                        background-position: 100% 50%;
-                    }
-                    100%{
-                        background-position: 0% 50%;
-                    }
-                }
-            }
-            &:hover::after, &:focus-within::after{
-                transform: scale(1) translateY(-50%);
-            }
+                :hover {
+                     background-color: ${props => props.theme.colourGrey};
+                 }
+            }            
 
             .submit-btn{
+                height: 61px;
+                width: 61px;
                 position: absolute;
                 top: 50%;
                 right: 0;
@@ -86,39 +79,32 @@ export const HeaderStyled = styled.header`
                 align-items: center;
                 justify-content: center;
                 transform: translateY(-50%);
-                border: none;
-                outline: none;
                 color: ${(props) => props.theme.colourWhite};
                 font-size: 1.2rem;
                 font-weight: 600;
                 cursor: pointer;
-                z-index: 10;
-                height: 100%;
-                padding: 0 1rem;
+                z-index: 10; 
                 border-radius: 50%;
-                background: linear-gradient(to right,
-                    ${props => props.theme.colourPurple},
-                    ${props => props.theme.colourSalmon}
-                );
-                background-size: 400% 400%;
-                animation: gradient 3s ease-in-out infinite;
-                @keyframes gradient{
-                    0%{
-                        background-position: 0% 50%;
-                    }
-                    50%{
-                        background-position: 100% 50%;
-                    }
-                    100%{
-                        background-position: 0% 50%;
-                    }
-                }
-
-                i{
-                    font-size: 1.8rem;
-                    color: white;
-                }
+                background:${props => props.theme.colourDarkBlue2};
+                :hover {
+                    background-color: ${props => props.theme.colourDarkBlue2};
+                 }
             }
         }
     }
-`;
+    
+  .fetch-btns{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    ${media.laptop} {
+        flex-direction: row;
+        width: 60%;        
+     }
+  }
+` 
+;
