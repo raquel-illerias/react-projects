@@ -1,15 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
     *, *::before, *::after{
         margin: 0;
-        padding: 0;
         box-sizing: border-box;
         list-style: none;
+        padding: 0;
         border: none;
+        outline: none;
     }
-
     body{
         font-family: 'Nunito', sans-serif;
         min-height: 100vh;
