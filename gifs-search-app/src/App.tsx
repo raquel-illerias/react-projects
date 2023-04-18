@@ -5,10 +5,7 @@ import { useThemeStore } from "./stores/theme.store";
 //import hooks
 import {useEffect} from 'react'
 //import components
-import Favourites from "./Components/Favourites";
 import Header from "./Components/Header";
-import Search from "./Components/Search";
-import Trending from "./Components/Trending";
 
 export default function App() {
 
@@ -23,7 +20,7 @@ export default function App() {
    fetch(`${baseUrl}/trending?api_key=${apiKey}&limit=30`)
    .then(res=>res.json())
    .then(res=>console.log(res))
-}, [apiKey])
+}, [])
 
 
   return (
