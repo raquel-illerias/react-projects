@@ -1,10 +1,14 @@
+//import styled components
 import { HeaderStyled } from "./header.style"
-import Button from "../Button";
+//import stores
 import { useThemeStore } from "../../stores/theme.store";
+
 
 export default function Header() {
 
     const theme = useThemeStore((state) => state.theme)
+
+
 
     return (
         <HeaderStyled theme={theme}>
@@ -21,10 +25,14 @@ export default function Header() {
                 </div>
             </form>
             <div className="fetch-btns">
-                <Button
-                />
-                <Button
-                />
+                <button className="pick-option">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="38px" viewBox="0 0 24 24" width="38px" fill="#f3d805"><g><path d="M0 0h24v24H0V0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/></g><g><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></g></svg>
+                    <span>Favourites</span>
+                </button>
+                <button className="pick-option">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 96 960 960" width="38" fill="#12af6f"><path d="m123 816-43-43 292-291 167 167 241-241H653v-60h227v227h-59V452L538 735 371 568 123 816Z" /></svg>
+                    <span>Trending</span>
+                </button>
             </div>
         </HeaderStyled>
     )
