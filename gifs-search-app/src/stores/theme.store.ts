@@ -39,7 +39,7 @@ export const useThemeStore = create<ThemeStore>((set) => ({
         colourBlue2: '#00e6cc',
         colourGreen: '#00ff99',
         colourGreen2: '#00cc66',
-        colourYellow: '#fff35c',
+        colourYellow: '#fed22b',
         colourGrey: '#f2f2f2',
         colourGreyDark: '#B4B5B6',
     },

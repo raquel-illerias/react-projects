@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from '../../images/bg.jpg';
+import background from '../../images/bkg.jpg';
 
 const media = {
     tablet: '@media screen and (min-width: 481px)',
@@ -43,17 +43,19 @@ export const HeaderStyled = styled.header`
         height: 60px;
         display: flex;
         align-items: center;
-
-     ${media.laptop} {
-        width: 60%;
-     }  
-                
+        justify-content: center;
+               
     
         .input-control{
             position: relative;
             width: 100%;
             border: 4px solid ${props => props.theme.colourDarkBlue2};
             border-radius: 35px;
+
+
+            ${media.laptop} {
+             width: 50%;
+            } 
            
             input{
                 position: relative;
@@ -99,12 +101,6 @@ export const HeaderStyled = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-
-    ${media.laptop} {
-        flex-direction: row;
-        width: 60%;        
-     }
 
     .pick-option {
     width: 100%;
@@ -113,10 +109,10 @@ export const HeaderStyled = styled.header`
     cursor: pointer;
     position: relative;
     z-index: 0;
+    gap: .6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .6rem;
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 35px;
@@ -125,6 +121,10 @@ export const HeaderStyled = styled.header`
     touch-action: manipulation;
     background-color: ${props => props.theme.colourWhite};
     border: 4px solid ${props => props.theme.colourDarkBlue2};
+   
+    ${media.laptop} {
+        width: 40%;
+     } 
 
   :hover {
         background-color: ${props => props.theme.colourGrey};
@@ -132,4 +132,3 @@ export const HeaderStyled = styled.header`
     }
   }
 `
-    ;
