@@ -6,8 +6,6 @@ import CheckoutForm from '../../Components/CheckoutForm';
 import Confirmation from '../../Components/Confirmation';
 import { Link } from 'react-router-dom';
 
-
-
 export default function Checkout({ basket, summaryCard, setSummaryCard, setBasket }) {
 
     const steps = [

@@ -6,6 +6,8 @@ import { FormControlLabel, Switch } from "@mui/material"
 import { useState } from "react";
 
 export default function Sides({ setBasket, basket, summaryCard, setSummaryCard }) {
+
+
     //Toggling calorie display
     const [calorie, setCalorie] = useState(true)
 

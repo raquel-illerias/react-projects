@@ -14,7 +14,6 @@ export default function Layout() {
 
     const [summaryCard, setSummaryCard] = useState([]);
 
-
     return( 
         <div>
             <Header basket={basket}></Header>

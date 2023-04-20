@@ -8,7 +8,6 @@ import Pizza from "../Pizza";
 import Sides from "../Sides";
 import { BoxContainer, TabStyled } from "./nav.style";
 
-
 function TabPanel(props) {
 
     const { children, value, index, ...other } = props;

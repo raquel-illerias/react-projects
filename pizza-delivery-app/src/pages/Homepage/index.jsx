@@ -1,6 +1,5 @@
 import Nav from "../../Components/Nav";
 
-
 export default function Homepage({setBasket, basket, setSummary, summaryCard, setSummaryCard}) {
 
     return (
