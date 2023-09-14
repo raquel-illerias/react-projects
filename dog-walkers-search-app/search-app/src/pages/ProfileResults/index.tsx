@@ -4,6 +4,7 @@ import { Pagination } from "@mui/material";
 import { PaginationContainer, WrapperStyled, ContainerStyled, HeaderContainer, HeaderOne, ProfileContainer, MapContainer, ResultsWrapper, MapWrapper } from "./profileResults.style";
 //import modules
 import PersonaCard from "../../Components/Personas";
+import AddText from "../../Components/AddText";
 import Profiles from '../../data';
 //import store
 import { useCheckboxStore } from "../../stores/checkbox.store";
@@ -54,6 +55,7 @@ export default function ProfileResults() {
                             </MapWrapper>
                         </MapContainer>
                     </ResultsWrapper>
+                    <AddText></AddText>
                 </WrapperStyled>
             </ContainerStyled>
         </>

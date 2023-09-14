@@ -9,7 +9,6 @@ import { FormGroup, FormControlLabel, Checkbox } from '@mui/material';
 import { DateStartContainer, CheckboxWrapper, ButtonSearch, InputContainer, DateWrapper, ArrowForward, FormContainer, FormWrapper, TextFieldStyled, DatePickerContainer } from "./searchForm.style";
 // import hooks
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 
 export default function SearchForm() {
 
