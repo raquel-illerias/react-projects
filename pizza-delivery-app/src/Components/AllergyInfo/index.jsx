@@ -16,10 +16,10 @@ export default function AllergyInfo() {
                         id="panel1a-header"
                     >
                         <InfoIconStyled></InfoIconStyled>
-                        <Typography>Have an allergy?</Typography>
+                        <Typography data-testid="allergy-text">Have an allergy?</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography>
+                        <Typography data-testid="descriptive-text">
                             Our food is freshly prepared instore so we cannot guarantee that any product is free from allergens due to the risk of cross contamination.
                         </Typography>
                     </AccordionDetails>
