@@ -10,7 +10,7 @@ export default function CardMenu({ meal, calorie, setBasket, basket, setSummaryC
    //HANDLING SELECT INPUT FOR PIZZA
    //handle changes in select input 
    const size = meal.sizes ?? false;
-   const kcal = meal.kcal
+   const kcal = meal.kcal;
    const [select, setSelect] = useState(size[size.length - 1]);
    const [selectedKcal, setSelectedKcal] = useState(kcal[kcal.length - 1]);
 
@@ -61,20 +61,19 @@ export default function CardMenu({ meal, calorie, setBasket, basket, setSummaryC
    }
    }
 
-
    return (
       <>
-         <PaperStyled elevation={1} key={meal.id} square>
-            <MealImage src={meal.image} alt={meal.name} className="meal__image" />
+         <PaperStyled elevation={1} key={meal.id} square data-testid='component-container'>
+            <MealImage data-testid='image-component' src={meal.image} alt={meal.name} className="meal__image" />
             <BoxInfo>
-               <Typography variant="h5" component="h2" gutterBottom>
+               <Typography variant="h5" component="h2" gutterBottom data-testid='component-title'>
                   {meal.name}
                </Typography>
             </BoxInfo>
             {meal.sizes ? <SelectSize calorie={calorie} size={meal.sizes} handleSize={handleSize} itemOptions={itemOptions} select={select} selectedKcal={selectedKcal} /> : null}
             {meal.price ? <SelectAmount calorie={calorie} price={meal.price} kcal={meal.kcal} selectAmount={selectAmount} handleAmountChange={handleAmountChange} /> : null}
             <BoxStyled>
-               <Fab color="primary" aria-label="add" onClick={(onAdd)}>
+               <Fab data-testid="component-addButton" color="primary" aria-label="add" onClick={(onAdd)}>
                   <IconAdd />
                </Fab>
             </BoxStyled>
