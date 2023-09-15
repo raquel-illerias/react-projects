@@ -4,9 +4,9 @@ export default function Confirmation() {
 
     return (
         <>
-            <FormContainer>
+            <FormContainer data-testid = 'component-container'>
                 <TitleBox>
-                    <Title variant="h3" component={"h2"} mt={1.5} sx={{ fontFamily: 'Roboto Condensed, sans-serif', fontWeight: 'bold' }}>
+                    <Title variant="h3" component={"h2"} mt={1.5} sx={{ fontFamily: 'Roboto Condensed, sans-serif', fontWeight: 'bold' }} data-testid = 'confirmation-text'>
                         YOUR ORDER IS ON THE WAY!
                     </Title>
                 </TitleBox>
