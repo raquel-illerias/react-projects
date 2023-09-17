@@ -1,12 +1,12 @@
-import Desserts from "../../Desserts";
+import Drinks from "../../Drinks";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
-import * as TitleMenu from '../../TitleMenu';
 import Menus from "../../../data";
+import * as TitleMenu from '../../TitleMenu';
 import userEvent from '@testing-library/user-event';
 
 
-describe('desserts menu page', () => {
+describe('drinks menu page', () => {
 
     const basket = {
         count: 0,
@@ -18,9 +18,9 @@ describe('desserts menu page', () => {
     const setBasket = jest.fn();
     const setSummaryCard = jest.fn();
 
-    const renderDesserts = () => {
+    const renderDrinks = () => {
         render(
-            <Desserts
+            <Drinks
             setBasket={setBasket}
             basket={basket}
             summaryCard={summaryCard}
@@ -30,20 +30,20 @@ describe('desserts menu page', () => {
     };
 
     it('should render the Component', () => {
-        renderDesserts();
-        expect(screen.getByTestId('desserts-component-container')).toBeInTheDocument();
+        renderDrinks();
+        expect(screen.getByTestId('drinks-component-container')).toBeInTheDocument();
     })
 
     it('should display the title', () => {
         const titleMenuComponent = jest.spyOn(TitleMenu, 'default');
-        renderDesserts();
+        renderDrinks();
 
         expect(titleMenuComponent).toHaveBeenCalled();
-        expect(titleMenuComponent.mock.calls[0][0]).toMatchObject({title: Menus[3].name});
+        expect(titleMenuComponent.mock.calls[0][0]).toMatchObject({title: Menus[4].name});
     })
 
     it('should toggle the calories', () => {
-        renderDesserts();
+        renderDrinks();
 
         
         userEvent.click(screen.getByRole('checkbox', {
@@ -52,5 +52,4 @@ describe('desserts menu page', () => {
         
         expect(screen.queryByTestId("kcal-info")).not.toBeInTheDocument();
     })
-
 })

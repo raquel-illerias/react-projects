@@ -33,7 +33,7 @@ export default function Pizza({basket, setBasket, summaryCard, setSummaryCard}) 
     })
 
     return (
-        <div>
+        <div data-testid='pizza-component'>
             <TitleMenu title={menuTitle} speciality={menuFirstSpeciality}></TitleMenu>
             <ToggleContainer>
                 <FormControlLabel control={<Switch defaultChecked onChange={toggleCalorie} />} label="Calorie Information" />

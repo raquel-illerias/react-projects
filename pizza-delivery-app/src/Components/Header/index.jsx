@@ -24,10 +24,11 @@ export default function Header({ basket }) {
 
     return (
         <>
-            <StyledHeader>
+            <StyledHeader data-testid='header-component'>
                 <Figure>
                     <LogoWrapper to="/">
                         <LogoImage
+                            data-testid='logo-component'
                             src={windowWidth > 800 ? require("../../images/logo-header.webp") : require("../../images/logo-mobile-header.webp")}
                         />
                     </LogoWrapper>
@@ -39,7 +40,7 @@ export default function Header({ basket }) {
                             <CountIcon>{basket.count}</CountIcon>
                         </CountWrapper>
                         <BasketName>BASKET</BasketName>
-                        <BasketPrice>£{basket.totalPrice.toFixed(2) > 0 ? basket.totalPrice.toFixed(2): priceZero.toFixed(2)}</BasketPrice>
+                        <BasketPrice data-testid='basket-price'>£{basket.totalPrice.toFixed(2) > 0 ? basket.totalPrice.toFixed(2): priceZero.toFixed(2)}</BasketPrice>
                 </BasketButton>
                 </BasketWrapper>
             </StyledHeader>

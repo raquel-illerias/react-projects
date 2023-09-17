@@ -9,7 +9,7 @@ export default function SelectSize({ calorie, itemOptions, handleSize, select, s
  
             {calorie ? (
                 <KcalContainer>
-                    <Typography variant="subtitle2" component="h6">
+                    <Typography variant="subtitle2" component="h6" data-testid='kcal-info'>
                         {selectedKcal}kcal
                     </Typography>
                 </KcalContainer>

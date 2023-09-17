@@ -22,13 +22,15 @@ export default function Desserts({setBasket, basket, summaryCard, setSummaryCard
     })
 
     return (
-        <div>
+        <>
+        <div data-testid='desserts-component-container'>
             <TitleMenu title={menuTitle}></TitleMenu>
             <ToggleContainer>
                 <FormControlLabel control={<Switch defaultChecked onChange={toggleCalorie} />} label="Calorie Information" />
             </ToggleContainer>
             <ContainerStyled>{specialityMeals}</ContainerStyled>
         </div>
+        </>
     )
 }
 

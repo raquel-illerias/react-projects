@@ -53,15 +53,15 @@ export default function Nav({setBasket, basket, summaryCard, setSummaryCard}) {
     };   
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%' }} data-testid='nav-component'>
             <BoxContainer sx={{ backgroundColor: '#e0eaef' }}>
                 <Tabs TabIndicatorProps={{ sx: { backgroundColor: "#e91c37", height: 5 } }} 
                     value={value} 
                     onChange={handleChange} 
                     aria-label="basic tabs example" 
                     centered>
-                        <TabStyled label="PIZZA" {...a11yProps(0)} />
-                        <TabStyled label="SIDES" {...a11yProps(1)} />
+                        <TabStyled label="PIZZA" {...a11yProps(0)} data-testid='pizza-tab'/>
+                        <TabStyled label="SIDES" {...a11yProps(1)} data-testid='sides-tab'/>
                         <TabStyled label="DESSERTS" {...a11yProps(2)} />
                         <TabStyled label="DRINKS" {...a11yProps(3)} />
                 </Tabs>

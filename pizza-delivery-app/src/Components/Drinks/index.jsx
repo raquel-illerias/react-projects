@@ -22,7 +22,7 @@ export default function Drinks({setBasket, basket, summaryCard, setSummaryCard})
     })
 
     return (
-        <div>
+        <div data-testid='drinks-component-container'>
             <TitleMenu title={menuTitle}></TitleMenu>
             <ToggleContainer>
                 <FormControlLabel control={<Switch defaultChecked onChange={toggleCalorie} />} label="Calorie Information" />

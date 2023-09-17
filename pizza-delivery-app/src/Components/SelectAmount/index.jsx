@@ -17,7 +17,8 @@ export default function SelectAmount({ price, kcal, selectAmount, handleAmountCh
         return (
             calorie? (<KcalContainer key={unit}>
                 <Typography variant="subtitle2"
-                    component="h6">
+                    component="h6"
+                    data-testid='kcal-info'>
                     {unit}kcal
                 </Typography>
             </KcalContainer>) : null

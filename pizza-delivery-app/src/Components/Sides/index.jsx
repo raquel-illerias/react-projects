@@ -24,7 +24,7 @@ export default function Sides({ setBasket, basket, summaryCard, setSummaryCard }
     })
 
     return (
-        <div>
+        <div data-testid='sides-component'>
             <TitleMenu title={menuTitle}></TitleMenu>
             <ToggleContainer>
                 <FormControlLabel control={<Switch defaultChecked onChange={toggleCalorie} />} label="Calorie Information" />
