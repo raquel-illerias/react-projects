@@ -1,8 +1,10 @@
+import Box from "./Components/Box";
+
 
 function App() {
   return (
     <div>
-       <h1>Hello</h1>
+       <Box></Box>
     </div>
   );
 }

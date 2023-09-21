@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
     *, *::before, *::after{
         margin: 0;
         box-sizing: border-box;
@@ -10,9 +13,13 @@ export const GlobalStyle = createGlobalStyle`
         outline: none;
     }
     body{
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Manrope', sans-serif;
         min-height: 100vh;
-        font-size: 1.2rem;
+        font-size: 28px;
         background-color: hsl(218, 23%, 16%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: context-menu;
     }
 `;
